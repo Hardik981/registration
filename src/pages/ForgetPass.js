@@ -6,10 +6,10 @@ function ForgetPass() {
     function checkEmailPattern(data) {
         let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
         if (pattern.test(data)) {
-            setWrongPat("false")
+            setWrongPat(false)
         }
         else {
-            setWrongPat("true")
+            setWrongPat(true)
             setPatName("Code must be 6 digit number")
         }
     }

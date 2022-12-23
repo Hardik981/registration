@@ -9,21 +9,21 @@ function Login() {
     function checkEmailPattern(data) {
         let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
         if (pattern.test(data)) {
-            setWrongPat("false")
+            setWrongPat(false)
         }
         else {
-            setWrongPat("true")
+            setWrongPat(true)
             setPatName("Wrong Email format")
         }
     }
     function checkPassPattern(data) {
         let pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}$/;
         if (pattern.test(data)) {
-            setWrongPat("false")
+            setWrongPat(false)
             setPass(data)
         }
         else {
-            setWrongPat("true")
+            setWrongPat(true)
             setPatName("Password must be between 8 to 20")
         }
     }
